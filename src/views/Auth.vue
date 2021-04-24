@@ -1,17 +1,15 @@
 <template>
   <div>
-    <h1>Home</h1>
+    <h1>Auth</h1>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Home',
-
+  name: 'Auth'
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 
 </style>

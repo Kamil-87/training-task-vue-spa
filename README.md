@@ -5,15 +5,24 @@
 yarn install
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Реализовать SPA приложение
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### Страница Аторизации
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### Форма из 4 полей: Имя, Email, пароль, фотогафия(по желанию пользователя)
+#### Валидация полей
+* Имя: Не менее 3-х и не более 15-ти
+* Email: example@host.domen
+* Пароль: не менее 8-ми символов, латиница (цифры, в верхнем регистре хотя бы 1)
+* Все поля обязательны
+
+#### При входе данные проверяются  и сохраняются в локальное хранилище
+
+### Страница Главная
+
+
+
+### Страница Статьи
+
+### Страница Профиль
+
