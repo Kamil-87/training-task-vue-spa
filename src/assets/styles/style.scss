@@ -10,11 +10,15 @@ body {
 
 #app {
   height: 100%;
+}
+
+.wrapper-layout {
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.wrapper-layout {
+.layout {
   flex-grow: 1;
 }
 
@@ -28,3 +32,104 @@ h3 {
   font-size: 2.4rem;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+}
+
+// form input
+
+.form {
+  &-item {
+    display: block;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  &-error {
+    border: 2px solid #D53128 !important;
+  }
+  
+  &-label {
+    display: block;
+    margin: 0 0 5px;
+    font-size: 1.6rem;
+    color: $colorText;
+    
+    &:after {
+      content: '*';
+      font-size: 0.9em;
+      margin-left: 0.2em;
+      line-height: 0.7em;
+      color: #D53128;
+    }
+  }
+  &-input {
+    padding: 0 15px;
+    border: 1px solid #808080;
+    background-color: #ffffff;
+    color: $colorText;
+    font-size: 1.6rem;
+    height: 40px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  &-input:active,
+  &-input:focus {
+    box-shadow: 0 0 0 0.1rem #9aff78;
+    border-color: #7cea53;
+  }
+  &-input:disabled {
+    background: #DDD;
+    color: #808080;
+  }
+  &-input.invalid {
+    box-shadow: 0 0 0 0.1rem #D53128;
+    border-color: #D53128;
+  }
+}
+.error-input {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #D53128;
+}
+
+.btn {
+  background: $colorMain;
+  color: $colorText;
+  box-shadow: 0 4px 4px rgba(218, 218, 218, 0.2);
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 16px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  
+  &:hover {
+    color: $colorText;
+    border-color: $colorMainLight;
+    box-shadow: 0 7px 15px rgba(6, 37, 83, 0.15);
+    transition: 0.3s;
+  }
+  
+  &:active {
+    color: $colorText;
+    border-color: $colorMainDark;
+    transition: 0.3s;
+  }
+  
+  &:disabled {
+    color: $grey;
+    border-color: $grey;
+  }
+}
